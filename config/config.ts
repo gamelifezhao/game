@@ -66,7 +66,7 @@ export default defineConfig({
       ],
     },
     {
-      name: 'account',
+      name: 'react进阶',
       icon: 'user',
       path: '/account',
       routes: [
@@ -75,7 +75,7 @@ export default defineConfig({
           redirect: '/account/center',
         },
         {
-          name: 'center',
+          name: 'Hooks学习',
           icon: 'smile',
           path: '/account/center',
           component: './account/center',
