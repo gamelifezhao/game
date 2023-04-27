@@ -107,3 +107,37 @@ const [state, dispatch] = useReducer(reducer,num);
 1. useRef和Ref的区别
 useRef是用来创建引用对象，而ref则是用来访问dom节点或将render方法中的react组件分配给引用对象，reactRef只是引用对象上的引用属性
 
+### useImperativeHandle 学习
+
+作用：用于Ref的透穿，一般作用于父调子方法
+使用方法：父组件定义useRef，穿给子组件这个Ref，子组件通过useImperativeHandle定义方法，父组件通过Ref调用子组件的方法
+
+```
+useImperativeHandle(Ref,()=>{
+    return {
+      fnc:fnc
+    }
+  })
+```
+
+### 自定义hooks和Hoc基础复习
+
+自定义hooks：主要用于逻辑的抽离，减少逻辑的耦合，每个hooks都是一个函数，函数名以use开头，并且所有的hooks都是一个闭包，是独立函数。
+
+Hoc：主要用于UI的抽离，减少UI的耦合，hoc是装饰器设计模式
+（在不改变原对象的基础上，通过对其进行包装拓展，使得原有对象可以动态具有更多功能，从而满足用户的更复杂需求）
+
+Hoc使用场景：操作props，渲染劫持，抽离state，生命周期劫持，ref转发
+
+操作props：在被包装组件接收 props 前，高阶组件可以先拦截到 props，对 props 执行增加、删除或修改的操作，然后将处理后的 props 再传递给被包装组件。
+
+渲染劫持：高阶组件可以通过渲染劫持的方式，对被包装组件进行渲染劫持，从而实现对组件的渲染控制。
+
+ref转发：高阶组件可以通过 ref 转发的方式，将被包装组件的 ref 传递给高阶组件，从而实现对被包装组件的 ref 控制。在4-26文件中我通过定义了父调子的方法，然后在textHoc文件中把这个组件的实例传给了4-26，然后通过操作实例的方法，去修改textHoc这个组件的东西，而不是通过更改props的方式去修改，当然这种方法很少用到。
+
+
+
+
+
+
+

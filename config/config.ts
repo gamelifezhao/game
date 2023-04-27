@@ -3,9 +3,7 @@ import { defineConfig } from 'umi';
 import { join } from 'path';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-
 const { REACT_APP_ENV } = process.env;
-
 export default defineConfig({
   hash: true,
   antd: {},
@@ -78,9 +76,18 @@ export default defineConfig({
           name: 'Hooks学习',
           icon: 'smile',
           path: '/account/center',
+          exact: true,
           component: './account/center',
         },
       ],
+    },
+    {
+      path: '/hooks',
+      component: './account/center/hooks',
+    },
+    {
+      path: '/4-26',
+      component: './account/center/4-26',
     },
     {
       path: '/',
@@ -101,7 +108,7 @@ export default defineConfig({
   // esbuild is father build tools
   // https://umijs.org/plugins/plugin-esbuild
   esbuild: {},
-  title: false,
+  title: '123123123',
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV || 'dev'],
   manifest: {
