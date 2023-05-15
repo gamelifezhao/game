@@ -38,7 +38,6 @@ type Props = {
 //
 const callback = (props:Props) => {
   console.log('子组件');
-
   return (
     <>
       子组件
