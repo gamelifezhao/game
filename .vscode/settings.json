@@ -7,5 +7,8 @@
   },
   "cSpell.words": [
     "prototype和proto的区别proto指向普通对象的原型"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
