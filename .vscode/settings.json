@@ -5,10 +5,11 @@
   "[markdown]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
-  "cSpell.words": [
-    "prototype和proto的区别proto指向普通对象的原型"
-  ],
+  "cSpell.words": ["prototype和proto的区别proto指向普通对象的原型"],
   "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[javascript]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   }
 }
